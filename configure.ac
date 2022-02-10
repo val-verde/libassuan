@@ -318,7 +318,7 @@ if test "$have_w32_system" = yes; then
      NETLIBS="-lws2 $NETLIBS"
    else
      # FIXME: Check why we need to use ws2_32 and document that.
-     NETLIBS="-lws2_32 $NETLIBS"
+     NETLIBS="$NETLIBS"
    fi
 fi
 
