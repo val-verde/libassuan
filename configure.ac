@@ -233,7 +233,7 @@ case "${host}" in
           CFLAGS="$CFLAGS -fPIC -DPIC"
         fi
         ;;
-    x86_64-*mingw32*)
+    *mingw64*)
         have_dosish_system=yes
         have_w32_system=yes
         have_w64_system=yes
