@@ -79,7 +79,7 @@ write_special (const char *fname, int lnr, const char *tag)
 {
   if (!strcmp (tag, "include:includes"))
     {
-      if (strstr (host_os, "mingw32"))
+      if (strstr (host_os, "mingw"))
         include_file (fname, lnr, "w32-includes.inc.h");
       else
         include_file (fname, lnr, "posix-includes.inc.h");
@@ -104,7 +104,7 @@ write_special (const char *fname, int lnr, const char *tag)
     }
   else if (!strcmp (tag, "include:types"))
     {
-      if (strstr (host_os, "mingw32"))
+      if (strstr (host_os, "mingw"))
         include_file (fname, lnr, "w32-types.inc.h");
       else
         include_file (fname, lnr, "posix-types.inc.h");
@@ -113,21 +113,21 @@ write_special (const char *fname, int lnr, const char *tag)
     {
       if (!strcmp (host_os, "mingw32ce"))
         include_file (fname, lnr, "w32ce-fd-t.inc.h");
-      else if (strstr (host_os, "mingw32"))
+      else if (strstr (host_os, "mingw"))
         include_file (fname, lnr, "w32-fd-t.inc.h");
       else
         include_file (fname, lnr, "posix-fd-t.inc.h");
     }
   else if (!strcmp (tag, "include:sock-nonce"))
     {
-      if (strstr (host_os, "mingw32"))
+      if (strstr (host_os, "mingw"))
         include_file (fname, lnr, "w32-sock-nonce.inc.h");
       else
         include_file (fname, lnr, "posix-sock-nonce.inc.h");
     }
   else if (!strcmp (tag, "include:sys-pth-impl"))
     {
-      if (strstr (host_os, "mingw32"))
+      if (strstr (host_os, "mingw"))
         include_file (fname, lnr, "w32-sys-pth-impl.h");
       else
         include_file (fname, lnr, "posix-sys-pth-impl.h");
